@@ -1,0 +1,202 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import HeaderSection from '../../components/HeaderSection';
+
+const DataSharingDetails = () => {
+    const [activeTab, setActiveTab] = useState('method');
+
+    return (
+        <div>
+            <HeaderSection title="الخدمات" />
+            
+            <div className="container my-5">
+                <div className="row">
+                    {/* الشريط الجانبي - على اليسار */}
+                    <div className="col-lg-3">
+                        <div className="card border-0 shadow-sm sticky-top" style={{top: '20px'}}>
+                            <div className="card-body text-end">
+                                {/* معلومات الخدمة */}
+                                <div className="mb-4">
+                                    <div className="d-flex justify-content-end align-items-center mb-3">
+                                        <div>
+                                            <h6 className="mb-0 fw-bold">الفئة المستهدفة</h6>
+                                            <small className="text-muted">موظفو الأمانة</small>
+                                        </div>
+                                        <i className="bi bi-people fs-4 text-success ms-3"></i>
+                                    </div>
+
+                                    <div className="d-flex justify-content-end align-items-center mb-3">
+                                        <div>
+                                            <h6 className="mb-0 fw-bold">المدة الزمنية للخدمة</h6>
+                                            <small className="text-muted">خلال 3 أيام عمل</small>
+                                        </div>
+                                        <i className="bi bi-clock fs-4 text-success ms-3"></i>
+                                    </div>
+
+                                    <div className="d-flex justify-content-end align-items-center mb-3">
+                                        <div>
+                                            <h6 className="mb-0 fw-bold">قنوات تقديم الخدمة</h6>
+                                            <small className="text-muted">إلكترونياً</small>
+                                        </div>
+                                        <i className="bi bi-laptop fs-4 text-success ms-3"></i>
+                                    </div>
+
+                                    <div className="d-flex justify-content-end align-items-center mb-3">
+                                        <div>
+                                            <h6 className="mb-0 fw-bold">تكلفة الخدمة</h6>
+                                            <small className="text-muted">مجاناً</small>
+                                        </div>
+                                        <i className="bi bi-currency-dollar fs-4 text-success ms-3"></i>
+                                    </div>
+                                </div>
+
+                                <hr />
+
+                                {/* الصفحة الخاصة بالاستفسار */}
+                                <div className="mb-3">
+                                    <h6 className="fw-bold mb-2">الصفحة الخاصة بالاستفسار</h6>
+                                    <a href="#" className="text-decoration-none text-success d-flex align-items-center justify-content-end">
+                                        <span>Madinah Municipality FAQ's page</span>
+                                        <i className="bi bi-box-arrow-up-left ms-2"></i>
+                                    </a>
+                                </div>
+
+                                {/* رقم الهاتف */}
+                                <div className="mb-3">
+                                    <h6 className="fw-bold mb-2">رقم الهاتف</h6>
+                                    <a href="tel:92001194" className="text-decoration-none text-success d-flex align-items-center justify-content-end">
+                                        <span>92001194</span>
+                                        <i className="bi bi-telephone ms-2"></i>
+                                    </a>
+                                </div>
+
+                                {/* البريد الإلكتروني */}
+                                <div className="mb-4">
+                                    <h6 className="fw-bold mb-2">البريد الإلكتروني</h6>
+                                    <a href="mailto:cr@amana-md.gov.sa" className="text-decoration-none text-success d-flex align-items-center justify-content-end">
+                                        <span className="text-break">cr@amana-md.gov.sa</span>
+                                        <i className="bi bi-envelope ms-2"></i>
+                                    </a>
+                                </div>
+
+                                <hr />
+
+                                {/* تطبيقات ذات صلة */}
+                                <div>
+                                    <h6 className="fw-bold mb-3">تطبيقات ذات صلة</h6>
+                                    <div className="d-flex flex-column gap-2">
+                                        <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                                            <img 
+                                                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                                                alt="App Store" 
+                                                style={{height: '40px', width: 'auto'}}
+                                            />
+                                        </a>
+                                        <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
+                                            <img 
+                                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                                alt="Google Play" 
+                                                style={{height: '40px', width: 'auto'}}
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* المحتوى الرئيسي - على اليمين */}
+                    <div className="col-lg-9">
+                        {/* العنوان */}
+                        <h2 className="text-end mb-3 fw-bold">مشاركة البيانات</h2>
+                        <p className="text-end text-muted mb-4">موظفو الأمانة</p>
+
+                        {/* الأزرار */}
+                        <div className="d-flex justify-content-end gap-2 mb-4">
+                            <a 
+                                href="https://www.my.gov.sa/wps/portal/snp/login" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="btn text-white px-4"
+                                style={{backgroundColor: '#198754', border: 'none'}}
+                            >
+                                ابدأ الخدمة
+                            </a>
+                            <Link 
+                                to="/services/data-sharing"
+                                className="btn text-white px-4"
+                                style={{backgroundColor: '#198754', border: 'none'}}
+                            >
+                                تعبئة النموذج
+                            </Link>
+                        </div>
+
+                        {/* التبويبات */}
+                        <div className="mb-4">
+                            <ul className="nav nav-tabs border-0">
+                                <li className="nav-item">
+                                    <button 
+                                        className={`nav-link ${activeTab === 'requirements' ? 'active' : ''}`}
+                                        onClick={() => setActiveTab('requirements')}
+                                        style={{
+                                            color: activeTab === 'requirements' ? '#198754' : '#6c757d',
+                                            borderBottom: activeTab === 'requirements' ? '3px solid #198754' : 'none',
+                                            backgroundColor: 'transparent',
+                                            border: 'none',
+                                            fontWeight: activeTab === 'requirements' ? 'bold' : 'normal'
+                                        }}
+                                    >
+                                        المتطلبات
+                                    </button>
+                                </li>
+                                <li className="nav-item">
+                                    <button 
+                                        className={`nav-link ${activeTab === 'method' ? 'active' : ''}`}
+                                        onClick={() => setActiveTab('method')}
+                                        style={{
+                                            color: activeTab === 'method' ? '#198754' : '#6c757d',
+                                            borderBottom: activeTab === 'method' ? '3px solid #198754' : 'none',
+                                            backgroundColor: 'transparent',
+                                            border: 'none',
+                                            fontWeight: activeTab === 'method' ? 'bold' : 'normal'
+                                        }}
+                                    >
+                                        طريقة التقديم
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* محتوى التبويبات */}
+                        <div className="tab-content bg-white p-4 rounded shadow-sm">
+                            {activeTab === 'method' && (
+                                <div className="text-end">
+                                    <p className="mb-3">
+                                        تقديم المكتب خدمات لتسهيل الحصول على البيانات الحكومية المفتوحة للأفراد والقطاع الخاص والجهات الحكومية.
+                                    </p>
+                                    <p>
+                                        تتيح هذه الخدمة للجهات الحكومية والأفراد والقطاع الخاص طلب الحصول على البيانات الحكومية المفتوحة بطريقة منظمة وآمنة. 
+                                        يتم معالجة الطلبات وفقاً للسياسات واللوائح المعتمدة لضمان حماية البيانات والخصوصية مع تسهيل الوصول إلى المعلومات المفتوحة.
+                                    </p>
+                                </div>
+                            )}
+                            
+                            {activeTab === 'requirements' && (
+                                <div className="text-end">
+                                    <ul className="list-unstyled">
+                                        <li className="mb-2">✓ حساب نفاذ فعّال</li>
+                                        <li className="mb-2">✓ تحديد نوع البيانات المطلوبة</li>
+                                        <li className="mb-2">✓ توضيح الغرض من استخدام البيانات</li>
+                                        <li className="mb-2">✓ الموافقة على شروط الاستخدام</li>
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default DataSharingDetails;

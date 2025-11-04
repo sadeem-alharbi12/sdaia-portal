@@ -1,0 +1,275 @@
+﻿/* إزالة الهوامش الافتراضية من الصفحة */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ✅ المحتوى الرئيسي */
+.share-page {
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(to bottom, #f1f8eb 25%, #ffffff 25%);
+    padding:40px 80px;
+    box-sizing:border-box
+}
+
+/* ✅ زر (ابدأ الخدمة) */
+.start-btn {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    height: fit-content; /* يخليه على قد المحتوى */
+    transition: background-color 0.3s ease;
+}
+
+/* ✅ تنسيق النموذج (الحقول) */
+.share-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.share-form,
+.form,
+.form-grid {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ✅ توزيع الحقول يمين ويسار */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    direction: rtl;
+    align-items: start;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .form-group.full-width {
+        grid-column: 1 / span 2;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* ✅ زر إرسال */
+.share-form .start-btn {
+    margin-top: 10px;
+}
+
+.shar-epage {
+    height: auto; /* خليها بطول المحتوى فقط */
+    margin: 0 auto; /* توسيط */
+    padding: 20px 0; /* مسافة بسيطة فوق وتحت */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 🎯 البوكس على اليسار */
+.info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* زر ابدأ الخدمة */
+.start-btn {
+    background-color: #0b481f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    /* 👇 الإضافات للتحريك */
+    position:relative;
+    top:-76px; /* يرفع الزر شوي لفوق */
+    right:750px; /* يقربه أكثر لليسار (حسب الاتجاه) */
+}
+
+
+
+/* الكرت الأبيض */
+.service-card {
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    width: 416px;
+    min-height: 640px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: -235px;
+    line-height: 1.8; /* ← هذه تضيف تباعد بين السطور داخل المربع */
+}
+
+    /* القوائم داخل الكرت */
+    .service-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0; /* ← يضيف مسافة بين كل قائمة والقائمة اللي بعدها */
+    }
+
+    .service-card li {
+        margin-bottom: 14px; /* ← يضيف مسافة بين كل سطر وسطر */
+        font-size: 16px;
+        color: #333;
+        line-height: 1.8;
+        display: flex;
+        align-items: flex-start; /* ← يخلي النص يبدأ من الأعلى بجانب الأيقونة */
+        gap: 8px; /* ← مسافة بين الأيقونة والنص */
+    }
+
+    .service-card strong {
+        color: #0b481f;
+        margin-left: 4px;
+    }
+
+    /* العناوين الصغيرة */
+    .service-card h4 {
+        color: #0b481f;
+        font-size: 17px;
+        margin: 20px 0 10px;
+    }
+
+/* الصور أسفل الكرت */
+.apps {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+    .apps img {
+        width: 130px;
+        height: auto;
+        cursor: pointer;
+    }
+
+/* قسم "تطبيقات ذات صلة" */
+.related {
+    margin-top: 20px;
+    color: #0b481f;
+    font-weight: 600;
+}
+
+.share-tabs {
+    position:relative;
+    top:-520px;
+    display: flex;
+    left:50px;
+    display:flex;
+    gap: 25px;
+    
+    padding-bottom: 8px;
+    justify-content: flex-start;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #444;
+    padding: 6px 0;
+}
+
+    .tab.active {
+        color: #007f3d;
+        border-bottom: 3px solid #007f3d;
+        font-weight: bold;
+    }
+
+.tab-content {
+    top: -500px;
+   right:15px;
+}
+/* تنسيق قائمة التفاصيل (الأيقونات + النصوص) */
+.service-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* مسافة صغيرة بين الأيقونة والنص */
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: #333;
+}
+
+    /* حجم الأيقونة ولونها */
+    .service-card ul li svg {
+        color: #5da271; /* أخضر خفيف */
+        font-size: 18px;
+    }
+
+    /* تنسيق رقم الهاتف والإيميل */
+    .service-card ul li a {
+        color: #2f855a; /* نفس اللون الأخضر */
+        text-decoration: underline;
+    }
+
+/* عشان الخط يكون أنيق */
+.service-card strong {
+    margin-left: 4px;
+}
+
+
+.info-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.info-item strong {
+    font-weight: 700;
+}
+
+.info-item p + p {
+    font-weight: 400;
+    color: #555;
+}
+
+.service-card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 12px 0;
+}
+
+.apps img {
+    width: 120px;
+    margin-left: 10px;
+}
+
+/* تنسيق .d-flex */
+.d-flex {
+    display: flex !important;
+    flex-direction: row-reverse;
+}

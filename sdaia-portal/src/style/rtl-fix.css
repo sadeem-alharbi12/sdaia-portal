@@ -1,0 +1,8 @@
+/* إصلاح محاذاة النصوص للغة العربية */
+.text-end {
+  text-align: right !important;
+}
+
+.text-start {
+  text-align: left !important;
+}

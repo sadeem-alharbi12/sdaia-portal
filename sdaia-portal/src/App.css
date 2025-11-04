@@ -1,0 +1,1502 @@
+﻿* {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+   
+}
+/* Navbar */
+.navbar .nav-link:hover {
+    background-color: #1a8052; 
+    color: #fff !important;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* ===== القائمة المنسدلة بالعرض ===== */
+.nav-item.dropdown {
+    position: relative;
+}
+
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%; /* تبدأ من منتصف الزر */
+        transform: translateX(-50%); /* تتحرك للخلف بمقدار نصف عرضها لتكون بالمنتصف */
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 0.5rem 0;
+        flex-direction: row; /* يجعل العناصر بالعرض */
+        min-width: max-content;
+        z-index: 9999;
+    }
+
+    /* تظهر القائمة عند التمرير */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+
+/* ===== عناصر القائمة المنسدلة ===== */
+.dropdown-item {
+    white-space: nowrap;
+    padding: 0.7rem 1rem;
+    color: #000;
+    background-color: transparent !important;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+    /* تأثير عند التمرير على عناصر القائمة المنسدلة */
+    .dropdown-item:hover {
+        background-color: #e9f5ee !important; /* خلفية خضراء فاتحة */
+        color: #1a8052 !important;
+    }
+
+    /* إزالة أي لون أزرق أو تحديد عند الضغط */
+    .dropdown-item:focus,
+    .dropdown-item:active {
+        background-color: transparent !important;
+        color: #1a8052 !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+/* إخفاء الفواصل */
+.dropdown-divider {
+    display: none;
+}
+
+
+
+/* ====== زر القائمة (عن المكتب) ====== */
+.dropdown-toggle {
+    background-color: #0a6430;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+    .dropdown-toggle:hover {
+        background-color: #094d26;
+    }
+
+
+
+/* ====== Footer Style (Final Clean Version) ====== */
+.ds-footer-container {
+    font-size: 1.1rem !important;
+    background-color: #074D31 !important;
+    color: #fff;
+    padding: 2em 3em; /* توازن من اليمين واليسار */
+}
+
+/* توزيع الأعمدة */
+.ds-footer-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+/* كل قسم */
+.ds-footer-section {
+    flex: 1 1 200px;
+    padding-bottom: 1em !important;
+}
+
+    /* العنوان الرئيسي */
+    .ds-footer-section button {
+        font-size: .9em !important;
+        font-weight: bold;
+        background: none;
+        border: none;
+        border-bottom: 1.5px solid #ffffff2e !important; /* لون أخف */
+        padding-bottom: 6px;
+        color: #fff;
+        cursor: pointer;
+        text-align: right;
+        width: fit-content; /* الخط أقصر من عرض النص */
+        margin-bottom: 0.4em; /* تقليل المسافة بين العنوان والأيقونات */
+    }
+
+/* الروابط */
+.ds-footer-section-body a {
+    display: block;
+    color: #ffffffcc;
+    text-decoration: none;
+    margin: .3em 0;
+    transition: color 0.3s;
+}
+
+    .ds-footer-section-body a:hover {
+        color: #fff;
+    }
+
+/* ===== أيقونات وسائل التواصل (تابعنا على) ===== */
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.4em; /* تقليل المسافة بين العنوان والأيقونات */
+}
+
+    .social-icons li a {
+        color: #fff;
+        font-size: 1.4em;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+        .social-icons li a:hover {
+            color: #00ffcc;
+            transform: scale(1.2);
+        }
+
+/* ===== أيقونات أدوات الإتاحة والوصول ===== */
+.ds-footer-section-body .social-icons img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    padding: 6px;
+    background: none; /* بدون تعبئة */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+    .ds-footer-section-body .social-icons img:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+/* ترتيب الأيقونات */
+.ds-footer-section-body .social-icons {
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* ===== أسفل الفوتر ===== */
+.bottom-footer-container {
+    border-top: 1px solid #ffffff33;
+    margin-top: 2em;
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bottom-footer-links a {
+    margin-right: 1em;
+    color: #ffffffcc;
+    text-decoration: none;
+}
+
+    .bottom-footer-links a:hover {
+        color: #fff;
+    }
+
+.bottom-footer-copy-right p {
+    margin: 0.2em 0;
+    font-size: 0.9em;
+    color: #ffffffcc;
+}
+
+.lift-image img {
+    height: 50px;
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+    .ds-footer-body {
+        flex-direction: column;
+    }
+
+    .bottom-footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+    }
+}
+
+    /* Custome*/
+
+    a.navbar-brand {
+        white-space: normal;
+        text-align: center;
+        word-break: break-all;
+    }
+
+    a {
+        color: #0077cc;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    .border-top {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+
+    button.accept-policy {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 60px;
+    }
+
+    .primary-color {
+        color: #1B8354;
+    }
+
+    body {
+        font-family: 'Cairo', sans-serif;
+        direction: rtl;
+    }
+
+    header.top-bar {
+        background-color: #f9f9f9;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    nav.navbar {
+        background-color: white;
+        border-bottom: 1px solid #ccc;
+    }
+
+        nav.navbar .nav-link {
+            color: #000;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+            nav.navbar .nav-link:hover {
+                color: #014C3E;
+            }
+
+    footer {
+        background-color: #074D31;
+        color: white;
+        padding: 2rem 1rem;
+    }
+
+        footer h6 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            footer ul li {
+                margin-bottom: 0.5rem;
+            }
+
+    .footer-icon {
+        margin-right: 0.5rem;
+    }
+
+
+    .custom-card {
+        width: 300px;
+        background: #fff;
+        border: none;
+        border-radius: 20px; /* زوايا دائرية */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* ظل ناعم */
+        padding: 25px 20px;
+        transition: all 0.3s ease;
+    }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .custom-card img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .custom-card p {
+            color: #222;
+            font-size: 16px;
+        }
+
+
+
+
+
+
+    /*datacommntiy*/
+    /* ========== مجتمع البيانات ========== */
+    .data-community-page {
+        direction: rtl;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        padding: 40px 60px;
+        background-color: #fff;
+    }
+
+
+    /* ===== Header ===== */
+    .data-header {
+        text-align: right;
+        margin-bottom: 30px;
+    }
+
+    .data-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #111;
+        margin: 0;
+    }
+
+    .data-subtitle {
+        color: #666;
+        font-size: 15px;
+        margin-top: 8px;
+        line-height: 1.8;
+    }
+
+    /* ===== Tabs ===== */
+    .data-tabs {
+        margin-top: 30px;
+        text-align: right;
+    }
+
+        .data-tabs ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start; /* Tabs على اليمين */
+            gap: 40px;
+            padding: 0;
+            margin: 0;
+        }
+
+    .data-tab-link {
+        text-decoration: none;
+        color: #222;
+        font-weight: 500;
+        font-size: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+        .data-tab-link:hover {
+            color: #008450;
+        }
+
+        .data-tab-link.active-tab {
+            border-bottom: 2px solid #008450;
+            color: #008450;
+            font-weight: 600;
+        }
+
+    /* ===== Divider ===== */
+    .data-divider {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        border: none;
+        border-top: 1px solid #ddd;
+    }
+
+    /* ===== Card ===== */
+    .data-card {
+        width: 256px;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 14px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        padding: 25px 20px;
+        text-align: right; /* النص كله لليمين */
+    }
+
+        .data-card:hover {
+            transform: translateY(-3px);
+        }
+
+    .data-card-icon {
+        background-color: #eaf9f0;
+        color: #008450;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .data-card-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    .data-card-details {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 8px;
+    }
+
+    /* ===== Button ===== */
+    .data-card-button {
+        background-color: #008450;
+        color: #fff;
+        border: none;
+        padding: 8px 22px;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        margin-right: auto; /* يحط الزر في اليسار */
+        margin-top: 10px;
+    }
+
+        .data-card-button:hover {
+            background-color: #006f3c;
+        }
+
+
+
+    /*AC*/
+
+    /* ===== Cards Section ===== */
+    /* ===== Container ===== */
+    .articles-cards-container {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    /* ===== Card ===== */
+    .article-card {
+        width: 740px;
+        height: 210px;
+        background: #ffffff;
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        position: relative; /* مهم عشان نقدر نثبت الزر */
+        padding: 20px 30px 20px 50px; /* يضيف مسافة داخلية على اليسار */
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+        .article-card:hover {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+    /* ===== Icon ===== */
+    .article-card-icon {
+        background-color: #eaf9f0;
+        color: #008450;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        margin-left: 10px; /* يبعد الأيقونة شوي عن اليسار */
+    }
+
+    /* ===== Title ===== */
+    .article-card-title {
+        font-size: 20px;
+        color: #222;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    /* ===== Author ===== */
+    .article-card-author {
+        font-size: 18px;
+        color: #444;
+        font-weight: 500;
+    }
+
+    /* ===== Button ===== */
+    .article-card-button {
+        background-color: rgb(243, 244, 246);
+        color: rgb(123, 134, 129);
+        border: none;
+        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 10px; /* يسار الكرت */
+        bottom: 10px; /* أسفل الكرت */
+        cursor: pointer;
+    }
+
+        .article-card-button:hover {
+            background-color: #006f3c;
+            color: white;
+        }
+
+
+    /*Commity*/
+    /* حاوية الكروت */
+    .community-cards-container {
+        display: flex;
+        justify-content: flex-start;
+        padding: 2rem 0;
+        direction: rtl;
+    }
+
+    .community-cards-grid {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .community-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        width: 256px;
+        padding: 1.5rem 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+        transition: transform 0.2s ease;
+    }
+
+        .community-card:hover {
+            transform: translateY(-3px);
+        }
+
+    .community-card-icon {
+        background: #f1fdf3;
+        color: #16a34a;
+        border-radius: 50%;
+        padding: 8px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .community-card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 0.25rem;
+    }
+
+    .community-card-author {
+        font-size: 0.875rem;
+        color: #6b7280;
+    }
+
+    /* هنا التعديل المهم */
+    .community-card-footer {
+        display: flex;
+        justify-content: flex-start; /* تخلي الأزرار على اليسار */
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
+        direction: ltr; /* حتى يبقى زر المشاركة أول ثم العين */
+    }
+
+    .community-card-button {
+        background-color: #008450;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        width: 60px;
+        height: 40px;
+        position: absolute;
+        left: 10px; /* يسار الكرت */
+        bottom: 10px; /* أسفل الكرت */
+        cursor: pointer;
+    }
+
+
+        .community-card-button:hover {
+            background: #15803d;
+        }
+
+    .community-card-view {
+        background: #f3f4f6;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 10px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+
+    /*Practitioners*/
+    /* ==== مجتمع البيانات - صفحة الأعضاء ==== */
+
+    /* ====== Container ====== */
+    .dataCommunity-cards-container {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    /* ====== Card ====== */
+    .dataCommunity-card {
+        width: 740px;
+        height: 210px;
+        background: #ffffff;
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 25px 40px 25px 40px; /* توازن المسافات من جميع الجهات */
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+        .dataCommunity-card:hover {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+    /* ====== Icon ====== */
+    .dataCommunity-card-header {
+        background-color: #eaf9f0;
+        color: #008450;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 15px;
+        right: 20px; /* 🔹 تثبيت الأيقونة في الزاوية العلوية اليمنى */
+    }
+
+    /* ====== Body ====== */
+    .dataCommunity-card-body {
+        margin-top: 60px; /* 🔹 ينزل النص شوي تحت الأيقونة */
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: right; /* لأن المحتوى عربي */
+    }
+
+    /* ====== Title ====== */
+    .dataCommunity-card-name {
+        font-size: 20px;
+        color: #222;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    /* ====== Subtitle ====== */
+    .dataCommunity-card-role {
+        color: #555;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    /* ====== Location ====== */
+    .dataCommunity-card-location {
+        background-color: #f3f3f3;
+        color: #555;
+        font-size: 15px;
+        padding: 6px 18px;
+        border-radius: 8px;
+        align-self: flex-start;
+        margin-top: 12px;
+    }
+
+
+    /*AI section */
+    .ai-section-container {
+        direction: rtl;
+        text-align: right;
+        padding: 30px 100px;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+    }
+
+    .ai-section-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 20px;
+    }
+
+    .ai-section-content {
+        max-width: 900px;
+        margin-top: 10px;
+    }
+
+    .ai-section-intro {
+        font-size: 17px;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+
+    .ai-section-points {
+        list-style-type: disc;
+        padding-right: 25px;
+        color: #222;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+        .ai-section-points strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+    .ai-section-subtitle {
+        font-weight: 700;
+        color: #0a3d2e;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .ai-section-recommendations {
+        list-style-type: disc;
+        padding-right: 25px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+
+    /* ==== Statistics ===== */
+    .statistics-page {
+        direction: rtl;
+        text-align: center;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        padding: 50px 0;
+        background-color: #fff;
+        color: #004d25;
+    }
+
+        /* ===== الأقسام ===== */
+        .statistics-page .statistics-section {
+            margin-bottom: 80px;
+        }
+
+        /* ===== العناوين ===== */
+        .statistics-page .statistics-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #004d25;
+            margin-bottom: 25px;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            text-align: right;
+        }
+
+        /* ===== الصور ===== */
+        .statistics-page .statistics-image {
+            width: 420px;
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+    /* ========== قسم فريق العمل ========== */
+    .team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+        background-color: #f9f9f9;
+    }
+
+    .team-header {
+        text-align: right;
+        font-size: 28px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 30px; /* يبعد العنوان عن الكروت */
+        margin-top: 15px; /* يبعد العنوان عن أعلى الصفحة */
+        margin-right: 50px;
+    }
+
+    .team-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 28px;
+        margin: 0 60px;
+    }
+
+    .team-card {
+        background: #fff;
+        border: 2px solid #a5d6a7;
+        border-radius: 15px;
+        width: 410px;
+        height: 350px;
+        text-align: right;
+        padding: 30px;
+        box-shadow: 0 2px 8px rgba(0, 100, 60, 0.1);
+        transition: all 0.3s ease;
+    }
+
+        .team-card:hover {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+    .team-icon {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 100, 60, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+        .team-icon img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+
+    /* ========== قسم عن المكتب ========== */
+    .main-container {
+        padding: 40px 80px;
+        background-color: #fff;
+    }
+
+    .about-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .about-text {
+        flex: 1;
+        margin-left: 50px;
+    }
+
+        .about-text h2 {
+            color: #000;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-text h3 {
+            color: #000;
+            font-size: 20px;
+            margin-top: 35px;
+            margin-bottom: 10px;
+        }
+
+    .image-boxmc {
+        flex: 1;
+        text-align: left;
+    }
+
+        .image-boxmc img {
+            width: 85%;
+            max-width: 450px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+        }
+
+    /* الكروت الثلاثة */
+    .cards-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .card {
+        flex: 1;
+        background: #fff;
+        border: 1px solid #e4e4e4;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #006b4f;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+    /* قسم رؤيتنا ورسالتنا */
+    .vision-mission-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .vision-card,
+    .mission-card {
+        flex: 1;
+        background: #fff;
+        border: 1px solid #e4e4e4;
+        border-radius: 10px;
+        padding: 25px;
+    }
+
+        .vision-card h3,
+        .mission-card h3 {
+            color: #006b4f;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .vision-card p,
+        .mission-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+    /* الأيقونات */
+    .icon-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        direction: rtl;
+    }
+
+    .icon-circle {
+        background: radial-gradient(circle, rgba(0,107,79,0.15) 40%, rgba(0,107,79,0.05) 100%);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        opacity: 0.9;
+        transition: transform 0.3s ease;
+    }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+    /* ===== SendDataCommunity  ===== */
+    /* ===== الصفحة العامة ===== */
+    .send-page {
+        direction: rtl;
+        text-align: right;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        background-color: #fafdfa;
+        min-height: 100vh;
+        padding: 40px 60px;
+    }
+
+    /* ===== الهيدر ===== */
+    .send-header {
+        background-color: #f6fcf9;
+        padding: 30px 40px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+    }
+
+    .send-title {
+        font-size: 1.8rem;
+        color: #014d42;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .send-subtitle {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* ===== النموذج ===== */
+    .send-form {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== الحقول ===== */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        display: block;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 6px;
+    }
+
+    .required {
+        color: red;
+        margin-right: 4px;
+    }
+
+    /* ===== الحقول النصية ===== */
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .form-phone-input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        color: #333;
+        outline: none;
+        transition: border-color 0.2s ease;
+    }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus,
+        .form-phone-input:focus {
+            border-color: #014d42;
+        }
+
+    /* ===== النص الكبير ===== */
+    .form-textarea {
+        height: 120px;
+        resize: none;
+    }
+
+    /* ===== صف الاسم ===== */
+    .form-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .half {
+        flex: 1;
+    }
+
+    /* ===== رقم الجوال ===== */
+    .phone-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .form-phone-code {
+        width: 80px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #f9f9f9;
+    }
+
+    /* ===== زر الإرسال ===== */
+    .form-actions {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .form-button {
+        background-color: #00703c;
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .form-button:hover {
+            background-color: #005f34;
+        }
+    /* ===== الرسائل ===== */
+    .error-text {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+
+    .success-text {
+        color: green;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* زر الإرسال إلى اليسار */
+
+    .error-text {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+
+    .success-text {
+        color: green;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+
+
+/* =========================================
+   تنسيق صفحة الخدمات (Services Page)
+   — خاص بالصورة المرفقة —
+========================================= */
+.page-services {
+    padding: 2rem 1rem 4rem;
+    background-color: #fff;
+    color: #000;
+}
+
+    /* عنوان الصفحة */
+    .page-services h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #074D31;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /* الفقرة التعريفية */
+    .page-services p.lead {
+        text-align: center;
+        color: #555;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+/* عناصر التحكم: الترتيب والبحث */
+.services-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+    .services-controls select,
+    .services-controls input {
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+/* شبكة بطاقات الخدمات */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* بطاقة الخدمة */
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    text-align: right;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    position: relative;
+}
+
+    /* الأيقونة */
+    .service-card img.icon {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* إزاحة النص للأسفل حتى لا يتداخل مع الأيقونة */
+    .service-card h5,
+    .service-card p {
+        margin-top: 3.5rem;
+    }
+
+    /* تأثير الهوفر */
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* عنوان البطاقة */
+    .service-card h5 {
+        color: #074D31;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* الوصف */
+    .service-card p {
+        color: #555;
+        font-size: 0.9rem;
+        min-height: 60px;
+    }
+
+/* الأزرار */
+.service-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+    .service-buttons .btn-primary {
+        background-color: #1B8354;
+        border-color: #1B8354;
+        color: #fff;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        padding: 0.4rem 1rem;
+        transition: 0.3s;
+    }
+
+        .service-buttons .btn-primary:hover {
+            background-color: #156a44;
+        }
+
+    .service-buttons .btn-outline {
+        background-color: transparent;
+        color: #1B8354;
+        border: 1px solid #1B8354;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        padding: 0.4rem 1rem;
+        transition: 0.3s;
+    }
+
+        .service-buttons .btn-outline:hover {
+            background-color: #1B8354;
+            color: #fff;
+        }
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-buttons {
+        flex-direction: column;
+    }
+}
+
+/* باقي التنسيقات كما هي */
+.team-page {
+    direction: rtl;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.member-photo {
+    border: 3px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.primary-color {
+    border-color: #3498db;
+    opacity: 0.3;
+}
+
+.services-page {
+    direction: rtl;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.main-title-section .title-underline {
+    width: 100px;
+    height: 4px;
+    background: #ffc107;
+}
+
+.data-sharing-section {
+    border-right: 4px solid #3498db;
+}
+
+.evaluation-section {
+    border-right: 4px solid #28a745;
+}
+
+.requirements-section {
+    border-right: 4px solid #17a2b8;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #3498db;
+        box-shadow: none;
+    }
+
+@media (max-width: 768px) {
+    .feedback-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        .feedback-buttons .btn {
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+    .service-actions .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+.primary-color {
+    color: #1B8354;
+}
+
+.team-page .card {
+    border: none;
+    border-radius: 10px;
+}
+
+.services-page .card {
+    border: none;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #3498db;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-buttons {
+        flex-direction: column;
+    }
+
+    .feedback-buttons {
+        flex-direction: column;
+    }
+}
+
